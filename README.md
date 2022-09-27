@@ -11,7 +11,6 @@ conda install anaconda-clean
 ```
 anaconda-clean
 
-# If you don't want to be asked about each file and directory
 anaconda-clean --yes
 ```
 **Step3.** there might be a few files left behind. To fix this, we can simply drag the remaining files to the trash.
