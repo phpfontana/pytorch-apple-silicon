@@ -60,7 +60,7 @@ python -m ipykernel install --user --name=torch-stable --display-name "Python 3.
 ```
 jupyter notebook
 ```
-**Step6.** Create a new notebook by "New" -> "Notebook: Python 3.9 (torch-nightly)" or "Notebook: Python 3.9 (torch-stable)". and run the following command to verify dependencies and PyTorch version/GPU access
+**Step6.** Create a new notebook by "New" -> "Notebook: Python 3.9(torch-nightly)" or "Notebook: Python 3.9(torch-stable)". and run the following command to verify dependencies and PyTorch version/GPU access
 ```
 import torch
 import pandas as pd
