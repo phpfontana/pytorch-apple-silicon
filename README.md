@@ -1,23 +1,10 @@
 # PyTorch on Apple Silicon
 
-This Repo is a step-by-step guide on how to install and run PyTorch on Apple Silicon Devices using Conda.
+This Repo is a step-by-step guide on how to install and run PyTorch on Apple Silicon Devices using Conda Package Manager.
 
 **Requirements:**
   - Apple Silicon Mac (M1, M1 Pro, M1 Max, M1 Ultra, M2)
   - macOS 12.3+
-
-## Removing Conda Environment (Optional)
-**Step1.** open terminal and run the following command to install `anaconda-clean` package. this package will uninstall anaconda distribution, which includes anaconda and miniconda.
-```
-conda install anaconda-clean
-```
-**Step2.** run the one of the following commands to remove miniconda/anaconda
-```
-anaconda-clean
-
-anaconda-clean --yes
-```
-**Step3.** there might be a few files left behind. To fix this, we can simply drag the remaining files to the trash.
 
 ## Setting up Miniconda3
 **Step1.** Download and install `Miniconda3` from https://docs.conda.io/en/latest/miniconda.html. make sure to select `Miniconda3 macOS Apple M1 64-bit pkg` or `Miniconda3 macOS Apple M1 64-bit bash`. 
@@ -31,12 +18,13 @@ anaconda-clean --yes
 mkdir pytorch-apple-silicon
 cd pytorch-apple-silicon
 ```
-
-**Step2a.** Download and save `torch-nightly.yml` to `pytorch-apple-silicon` directory and execute the following command on the terminal to create an environment with PyTorch Nightly build (includes MPS acceleration) and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
+### For the PyTorch Nightly Build (w/ MPS Acceleration)
+**Step2a.** Download and save `torch-nightly.yml` to `pytorch-apple-silicon` directory and execute the following command on the terminal to create an environment with `PyTorch Nightly` build and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
 ```
 conda env create -f torch-nightly.yml -n torch-nightly
 ```
-**Step2b.** Download and save `torch-stable.yml` to `pytorch-apple-silicon` directory and execute the following command to create an environment with PyTorch Stable build (includes CPU only) and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
+### For the PyTorch Stable Build (w/ CPU only)
+**Step2b.** Download and save `torch-stable.yml` to `pytorch-apple-silicon` directory and execute the following command to create an environment with PyTorch Stable build and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
 ```
 conda env create -f torch-stable.yml -n torch-stable
 ```
