@@ -52,31 +52,33 @@ jupyter notebook
 ```
 **Step6.** Create a new notebook by "New" -> "Notebook: Python 3.9(torch-nightly)" or "Notebook: Python 3.9(torch-stable)". and run the following command to verify dependencies and PyTorch version/GPU access
 ```
+import sys
 import torch
+import sklearn 
 import pandas as pd
-import sklearn
-import matplotlib.pyplot as plt
 
-print(f"PyTorch version: {torch.__version__}")
+# Verifying python version | package manager | 
+print(f"Python {sys.version}\n")
 
-# Check PyTorch has access to MPS (Metal Performance Shader, Apple's GPU architecture)
-print(f"Is MPS (Metal Performance Shader) built? {torch.backends.mps.is_built()}")
-print(f"Is MPS available? {torch.backends.mps.is_available()}")
+print(f"PyTorch Version: {torch.__version__}")
+print("MPS (Apple Metal) is AVAILABLE" if torch.backends.mps.is_available() else "CPU ONLY")
 
 # Set the device      
 device = "mps" if torch.backends.mps.is_available() else "cpu"
-print(f"Using device: {device}")
-```
-**Step7.** To run models with MPS (*Metal Performance Shaders*), set the device to `"mps"` with `.to(device)` (For PyTorch Nightly only)
-```
-import torch
+print(f"Target device is {device}")
 
-# Set the device
-device = "mps" if torch.backends.mps.is_available() else "cpu"
-
-# Create data and send it to the device
-x = torch.rand(size=(3, 4)).to(device)
-x
+print(f"\nScikit-Learn Version: {sklearn.__version__}")
+print(f"Pandas Version: {pd.__version__}")
 ```
+Output should be something like this:
+```
+Python 3.9.13 | packaged by conda-forge | [Clang 13.0.1 ]
 
+PyTorch Version: 1.13.0.dev20220926
+MPS (Apple Metal) is AVAILABLE
+Target device is mps
+
+Scikit-Learn Version: 1.1.2
+Pandas Version: 1.5.0
+```
 
