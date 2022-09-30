@@ -12,22 +12,24 @@ This Repo is a step-by-step guide on how to install and run PyTorch on Apple Sil
 **Step2.** Restart Terminal.
 
 ## Setting up PyTorch environment
-
 **Step1.** Open terminal and run the following command to create a directory to setup a PyTorch environment
 ```
 mkdir pytorch-apple-silicon
 cd pytorch-apple-silicon
 ```
-### For the PyTorch Nightly Build (w/ MPS Acceleration)
+### For the PyTorch Nightly build (w/ MPS Acceleration)
 **Step2a.** Download and save `torch-nightly.yml` to `pytorch-apple-silicon` directory and execute the following command on the terminal to create an environment with `PyTorch Nightly` build and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
 ```
 conda env create -f torch-nightly.yml -n torch-nightly
 ```
-### For the PyTorch Stable Build (w/ CPU only)
-**Step2b.** Download and save `torch-stable.yml` to `pytorch-apple-silicon` directory and execute the following command to create an environment with PyTorch Stable build and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
+
+### For the PyTorch Stable build (w/ CPU only)
+**Step2b.** Download and save `torch-stable.yml` to `pytorch-apple-silicon` directory and execute the following command to create an environment with `PyTorch Stable` build and dependencies installed. Make sure to `cd` into the `pytorch-apple-silicon` directory before running the command.
+
 ```
 conda env create -f torch-stable.yml -n torch-stable
 ```
+
 **Step3.** Activate the chosen Conda environment.
 ```
 conda activate torch-nightly
