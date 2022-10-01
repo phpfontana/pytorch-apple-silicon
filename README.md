@@ -70,6 +70,7 @@ print(f"Target device is {device}")
 print(f"\nScikit-Learn Version: {sklearn.__version__}")
 print(f"Pandas Version: {pd.__version__}")
 ```
+
 Output should be something like this:
 ```
 Python 3.9.13 | packaged by conda-forge | [Clang 13.0.1 ]
