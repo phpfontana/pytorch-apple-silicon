@@ -7,9 +7,12 @@ This Repo is a step-by-step guide on how to install and run PyTorch on Apple Sil
   - macOS 12.3+
 
 ## Setting up Miniconda3
-**Step1.** Download and install `Miniconda3` from https://docs.conda.io/en/latest/miniconda.html. Make sure to select `Miniconda3 macOS Apple M1 64-bit pkg` or `Miniconda3 macOS Apple M1 64-bit bash`.  
+**Step1.** Download and install `Miniconda3` from https://docs.conda.io/en/latest/miniconda.html. Make sure to select `Miniconda3 macOS Apple M1 64-bit pkg` or `Miniconda3 macOS Apple M1 64-bit bash`. Execute and follow installation prompts.
 
-**Step2.** Execute and follow installation prompts.
+**Step2.** Open terminal and install `xcode-select` by using the following command. It is also possible to install Xcode from the App Store.
+```
+xcode-select --install
+```
 
 ## Setting up PyTorch environment
 **Step1.** Open terminal and run the following command to create a directory to setup a PyTorch environment
@@ -30,7 +33,7 @@ conda env create -f torch-nightly.yml -n torch
 conda env create -f torch-stable.yml -n torch
 ```
 
-**Step3.** Activate the chosen Conda environment.
+**Step3.** Activate the Conda environment.
 ```
 conda activate torch
 ```
