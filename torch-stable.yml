@@ -18,7 +18,5 @@ dependencies:
     - requests
     - h5py
     - pyyaml
-    - flask
-    - boto3
     - ipykernel
     
