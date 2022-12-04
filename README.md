@@ -49,7 +49,7 @@ jupyter notebook
 **Step6.** Create a new notebook with "Python 3.9 (torch)" kernel. 
 
 **Step7.** Run the following command to verify dependencies and PyTorch version/GPU access
-```
+```Python
 import sys
 import torch
 import sklearn 
